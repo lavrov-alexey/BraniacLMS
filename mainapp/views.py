@@ -10,7 +10,7 @@ class MainPageView(TemplateView):
 
 
 class NewsPageView(TemplateView):
-    template_name = "mainapp/news.html" 
+    template_name = "mainapp/news.html"
 
 
 class CoursesPageView(TemplateView):
