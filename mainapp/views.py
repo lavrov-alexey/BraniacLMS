@@ -12,6 +12,14 @@ class MainPageView(TemplateView):
 class NewsPageView(TemplateView):
     template_name = "mainapp/news.html"
 
+    def get_context_data(self, **kwargs):
+        # Get all previsious data
+        context = super().get_context_data(**kwargs)
+        # Create your own data
+        context["news_title"] = "ГРОМКИЙ НОВОСТНОЙ ЗАГОЛОВОК"
+        context["news_preview"] = "Предварительное описание новости, которое заинтересует каждого"
+        return context
+
 
 class CoursesPageView(TemplateView):
     template_name = "mainapp/courses_list.html"
