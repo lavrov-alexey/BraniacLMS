@@ -2,6 +2,8 @@
 
 # from django.http import HttpResponse
 # from django.views.generic import View
+from datetime import datetime
+
 from django.views.generic import TemplateView
 
 
@@ -19,6 +21,7 @@ class NewsPageView(TemplateView):
         context["news_title"] = "ГРОМКИЙ НОВОСТНОЙ ЗАГОЛОВОК"
         context["news_preview"] = "Предварительное описание новости, которое заинтересует каждого"
         context["range"] = range(1, 6)
+        context["datetime_obj"] = datetime.now()
         return context
 
 
