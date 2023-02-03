@@ -8,16 +8,26 @@
 
   <div class="col-lg-8">
 
-    {% for idx in tmp_range %}
+    {% for news_item in news_list %}
     <div class="card my-2">
       <div class="card-body">
-        <h5 class="card-title">{{ news_title }} - стр. {{ page }} - {{ idx }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ datetime_obj | date:'d.m.Y h:i:s' }}</h6>
-        <p class="card-text">{{ news_preview }}</p>
+        <h5 class="card-title">{{ news_item.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ news_item.created_at }}</h6>
+        <p class="card-text">{{ news_item.preview }}</p>
         <a href="#" class="card-link">Подробнее</a>
       </div>
     </div>
     {% endfor %}
+
+    <div class="card my-2">
+      <div class="card-body">
+        <h5 class="card-title">Отдельная новость для поиска по ссылке</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{% now 'd.m.Y H:i'%}</h6>
+        <p class="card-text">Фраза для поиска: "Django как передать get-параметр в ссылке"</p>
+        <a href="{% url 'mainapp:news' %}?q=Django как передать get-параметр в ссылке"
+           class="card-link">Найти искомую фразу в google</a>
+      </div>
+    </div>
 
   </div>
 
