@@ -1,0 +1,18 @@
+[33m8699b91[m[33m ([m[1;36mHEAD -> [m[1;32mlesson-3[m[33m)[m Lesson-3. Custom template filter
+[33mf821453[m Lesson-3. Template's filters
+[33m98f3ece[m Lesson-3. Tag with
+[33mf0fb9d5[m Lesson-3. Conditions in templates
+[33m493b359[m Lesson-3 Loops in templates
+[33m844b8fa[m Lesson-3. Templates including (main menu)
+[33m2611418[m Lesson-3. Template inhereting
+[33m4855329[m Lesson-3. Template's context
+[33mf3f2b4e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #1 from lavrov-alexey/lesson-2
+[33ma16adf3[m[33m ([m[1;31morigin/lesson-2[m[33m, [m[1;32mlesson-2[m[33m)[m Add Tasks lesson-2.md
+[33m5716dbb[m add project requirements.txt
+[33ma5a5cc9[m lesson-2 tasks finished
+[33mae3b9b8[m Code style fix and autofix with precommit
+[33m0addd5d[m Paths to static resourses in templates corrected
+[33m7c0c808[m Static site with Django
+[33mde7c401[m Hello world with CBV and FBV
+[33mfba5759[m Preconfig project
+[33m74dc29b[m Initional commit
