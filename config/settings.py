@@ -65,6 +65,7 @@ TEMPLATES = [
             "context_processors": [
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
+                "django.template.context_processors.media",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "mainapp.context_processors.example.simple_context_processor",
@@ -105,6 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# прописываем путь до нашей кастомной модели "основного" пользователя
+AUTH_USER_MODEL = "authapp.CustomUser"
+
+LOGIN_REDIRECT_URL = "mainapp:main_page"  # переадресация куда идем после логина
+LOGOUT_REDIRECT_URL = "mainapp:main_page"  # и после разлогинивания
+
+# включаем функционал сохранения сообщений в сессии (пока польз. не вышел)
+# Есть еще вариант еще в куках польз. (на много сессий) или др. свой вариант
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -138,8 +148,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
-
-# прописываем путь до нашей кастомной модели "основного" пользователя
-AUTH_USER_MODEL = "authapp.User"
-LOGIN_REDIRECT_URL = ""  # переадресация куда идем после логина
-LOGOUT_REDIRECT_URL = ""  # и после разлогинивания
