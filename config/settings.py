@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "markdownify.apps.MarkdownifyConfig",
+    "authapp",
     "mainapp",
 ]
 
@@ -132,3 +133,11 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# прописываем путь к папке с пользовательскими файлами (картинки, видео и т.п.)
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = BASE_DIR / "media"
+
+# прописываем путь до нашей кастомной модели пользователя
+AUTH_USER_MODEL = "authapp.User"
