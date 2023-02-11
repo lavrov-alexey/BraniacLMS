@@ -23,6 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", RedirectView.as_view(url="mainapp/")),
     path("mainapp/", include("mainapp.urls", namespace="mainapp")),
+    path("authapp/", include("authapp.urls", namespace="authapp")),
 ]
 
 # проверяем - если мы не на проде, то задаем где django искать медиа-файлы
