@@ -167,6 +167,8 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 LOG_FILE = BASE_DIR / "var" / "log" / "main_log.log"
 
+LOG_FILE = BASE_DIR / "var" / "log" / "main_log.log"
+
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
