@@ -58,6 +58,6 @@ class CustomUserChangeForm(forms.ModelForm):
         data = self.cleaned_data.get("age")
         if data:
             if data < 10 or data > 100:
-                logger.debug(f"Try to set wrong age: {data} of user {self.instance.username}")
+                logger.warning(f"Try to set wrong age: {data} of user {self.instance.username}")
                 raise ValidationError(_("Please, enter a valid age!"))
         return data
